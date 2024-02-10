@@ -58,7 +58,7 @@ class ModelTrainer:
             ]
             
             best_model = models[best_model_name]
-            print('hello world')
+            
 
             print(f'Best Model Found 2, Model Name : {best_model_name} , R2 Score : {best_model_score}')
             print('\n====================================================================================\n')
