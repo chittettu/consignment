@@ -35,11 +35,11 @@ class DataTransformation:
         try:
             logging.info('Data Transformation initiated')
 
-            numerical_cols=['Unit of Measure (Per Pack)','Line Item Quantity','Pack Price',
-                            'Unit Price',
-                            'Line Item Insurance (USD)','Freight Cost (USD)']
+            numerical_cols=['unit_of_measure_(per_pack)','line_item_quantity','pack_price',
+                            'unit_price',
+                            'line_item_insurance_(usd)','freight_cost_(usd)']
             
-            categorical_cols=['Fulfill Via','Vendor INCO Term','Shipment Mode','First Line Designation']
+            categorical_cols=['fulfill_via','vendor_inco_term','shipment_mode','first_line_designation']
 
             
             ## Numerical Pipeline
@@ -66,8 +66,8 @@ class DataTransformation:
             logging.info("Exception occured in the initiate_datatransformation")
 
             raise shippingException(e,sys)
-    @staticmethod
-    def _outlier_capping(df,col):
+    
+    def _outlier_capping(self,df,col):
         """
         Method Name :   _outlier_capping
 
@@ -118,33 +118,37 @@ class DataTransformation:
             logging.info("read train and test data complete")
             logging.info(f'Train Dataframe Head : \n{self.train_df.head().to_string()}')
             logging.info(f'Test Dataframe Head : \n{self.test_df.head().to_string()}')
+
             
             preprocessing_obj = self.get_data_transformation()
 
-            target_column_name='Line Item Value'
+            target_column_name='line_item_value'
 
-            drop_columns = [target_column_name,'ID', 'Project Code', 'PQ ', 'PO / SO ', 'ASN/DN ', 'Country',
-                            'Managed By','PQ First Sent to Client Date', 'PO Sent to Vendor Date','Scheduled Delivery Date', 
-                            'Delivered to Client Date','Delivery Recorded Date', 'Product Group', 'Sub Classification',
-                            'Vendor', 'Item Description', 'Molecule/Test Type', 'Brand', 'Dosage','Dosage Form',
-                            'Manufacturing Site','Weight (Kilograms)'
+            drop_columns = [target_column_name,'id', 'project_code', 'pq_', 'po_/_so_', 'asn/dn_', 'country',
+                            'managed_by','pq_first_sent_to_client_date', 'po_sent_to_vendor_date','scheduled_delivery_date', 
+                            'delivered_to_client_date','delivery_recorded_date', 'product_group', 'sub_classification',
+                            'vendor', 'item_description', 'molecule/test_type', 'brand', 'dosage','dosage_form',
+                            'manufacturing_site','weight_(kilograms)'
                              ]
             
             
-            self.train_df["Freight Cost (USD)"] = self.train_df["Freight Cost (USD)"].apply(DataTransformation._trans_freight_cost)
+            self.train_df["freight_cost_(usd)"] = self.train_df["freight_cost_(usd)"].apply(self._trans_freight_cost)
+            self.test_df["freight_cost_(usd)"] = self.test_df["freight_cost_(usd)"].apply(self._trans_freight_cost)
+            
 
-            self.test_df["Freight Cost (USD)"] = self.test_df["Freight Cost (USD)"].apply(DataTransformation._trans_freight_cost)
+
            
-            numerical_cols=['Unit of Measure (Per Pack)','Line Item Quantity','Line Item Value','Pack Price',
-                            'Unit Price',
-                            'Line Item Insurance (USD)','Freight Cost (USD)']
+            numerical_cols=['unit_of_measure_(per_pack)','line_item_quantity','line_item_value','pack_price',
+                            'unit_price',
+                            'line_item_insurance_(usd)','freight_cost_(usd)']
             
             for col in numerical_cols:
                 self.train_df[col] = self.train_df[col].fillna(self.train_df[col].median())
                 self.test_df[col] = self.test_df[col].fillna(self.test_df[col].median())
                 
-            self.train_df["Freight Cost (USD)"]=self.train_df["Freight Cost (USD)"].astype("float")
-            self.test_df["Freight Cost (USD)"]=self.test_df["Freight Cost (USD)"].astype("float")
+            self.train_df["freight_cost_(usd)"]=self.train_df["freight_cost_(usd)"].astype("float")
+            self.test_df["freight_cost_(usd)"]=self.test_df["freight_cost_(usd)"].astype("float")
+           
                 
             
                 
@@ -180,6 +184,7 @@ class DataTransformation:
             logging.info("preprocessing pickle file saved")
             
             
+            
             return (
                 train_arr,
                 test_arr
@@ -190,14 +195,3 @@ class DataTransformation:
 
             raise shippingException(e,sys)
     
-
-
-            
-
-
-            
-
-
-            
-                            
-            

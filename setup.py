@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 
 setup(
-    name="consignment",
+    name="shipment",
     version="0.0.1",
     author="mahesh",
     author_email="geomaheshnair@gmail.com",

@@ -40,8 +40,8 @@ class ModelTrainer:
             'Lasso':Lasso(),
             'Ridge':Ridge(),
             'Elasticnet':ElasticNet(),
-            ##'Randomforest':RandomForestRegressor(n_estimators=100),
-            'XGBOOST': XGBRegressor(),
+            'Randomforest':RandomForestRegressor(n_estimators=100),
+            'XGBOOST': XGBRegressor()
             
         }
             

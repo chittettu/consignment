@@ -3,7 +3,6 @@ import numpy as np
 from src.logger import logging
 from src.exception import shippingException
 import sys
-sys.path.append('E:\\data_science\\project\\Internship\\logistics')
 
 
 
@@ -28,6 +27,8 @@ class DataIngestion:
         logging.info("data ingestion started")
         try:
             data=pd.read_csv(r'E:\data_science\project\Internship\SCMS_Delivery_History_Dataset.csv')
+            data.columns=data.columns.str.lower()
+            data.columns=data.columns.str.replace(" ","_")
             logging.info(" reading a df")
 
             os.makedirs(os.path.dirname(os.path.join(self.ingestion_config.raw_data_path)),exist_ok=True)
@@ -37,6 +38,8 @@ class DataIngestion:
             logging.info("here i have performed train test split")
             
             train_data,test_data=train_test_split(data,test_size=0.25)
+            
+
             logging.info("train test split completed")
             
             train_data.to_csv(self.ingestion_config.train_data_path,index=False)
@@ -56,9 +59,3 @@ class DataIngestion:
         except Exception as e:
             logging.info()
             raise shippingException(e,sys)
-
-
-if __name__=="__main__":
-    obj=DataIngestion()
-
-    obj.initiate_data_ingestion()
