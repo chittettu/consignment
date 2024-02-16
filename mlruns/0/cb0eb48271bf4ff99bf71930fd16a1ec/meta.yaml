@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/data_science/project/Internship/consignment/mlruns/0/cb0eb48271bf4ff99bf71930fd16a1ec/artifacts
+end_time: 1708072417446
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: cb0eb48271bf4ff99bf71930fd16a1ec
+run_name: welcoming-zebra-835
+run_uuid: cb0eb48271bf4ff99bf71930fd16a1ec
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1708072412054
+status: 3
+tags: []
+user_id: asus
