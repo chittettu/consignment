@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/data_science/project/Internship/consignment/mlruns/0/f1e5b5ad8c9440b09e50d6a8f3809df5/artifacts
+end_time: 1708229109672
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f1e5b5ad8c9440b09e50d6a8f3809df5
+run_name: amusing-hare-133
+run_uuid: f1e5b5ad8c9440b09e50d6a8f3809df5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1708229100302
+status: 3
+tags: []
+user_id: asus
