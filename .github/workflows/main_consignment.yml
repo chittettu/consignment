@@ -64,4 +64,4 @@ jobs:
         with:
           app-name: 'consignment'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3361D8D7D8304A8D8CE28E18F45B251D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5127F51F1A2F417C897A8822C374B839 }}
