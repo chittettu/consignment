@@ -29,6 +29,6 @@ Data for the project taken fron the Kaggle https://www.kaggle.com/datasets/divye
 
 ## Architecture
 
-![Uploading Untitled Diagram.drawio.png…]()
+![Untitled Diagram drawio](https://github.com/chittettu/consignment/assets/105189151/868d5bb4-c81d-4cdc-a18b-7423132f580c)
 
 
