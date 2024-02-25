@@ -31,4 +31,11 @@ Data for the project taken fron the Kaggle https://www.kaggle.com/datasets/divye
 
 ![Untitled Diagram drawio](https://github.com/chittettu/consignment/assets/105189151/868d5bb4-c81d-4cdc-a18b-7423132f580c)
 
+## Model information
+
+           Model Name              R2 score 
+        1. Linear Regression         94.67        
+        2. Elasticnet                86.82
+        3. Random forest             97.82
+        4. Xgboost                   97.4
 
