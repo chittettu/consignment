@@ -20,10 +20,6 @@ certainty. Logistics leaders may use this data to address supply chain difficult
 enhance service levels all at the same time. The main goal is to predict the consignment pricing 
 based on the available factors in the dataset.
 
-## Installation
-git clone https://github.com/chittettu/consignment.git
-pip install -r requirements.txt
-
 ## Data 
 Data for the project taken fron the Kaggle https://www.kaggle.com/datasets/divyeshardeshana/supply-chain-shipment-pricing-data.
 
@@ -38,4 +34,14 @@ Data for the project taken fron the Kaggle https://www.kaggle.com/datasets/divye
         2. Elasticnet                86.82
         3. Random forest             97.82
         4. Xgboost                   97.4
+        
+## Result and analysis
+After model training, the model shows a R-squared value of 0.9782 (97.82% accuracy) on the test data, signifying a robust level of predictive accuracy.
+## Installation
+To run the code, first clone this repository and navigate to the project directory:
+    git clone 
+Create a virtual environment
+    conda create -p env python==3.8 -y
+    conda activate env/
+
 
