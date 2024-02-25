@@ -22,9 +22,13 @@ based on the available factors in the dataset.
 
 ## Installation
 git clone https://github.com/chittettu/consignment.git
-
 pip install -r requirements.txt
+
 ## Data 
 Data for the project taken fron the Kaggle https://www.kaggle.com/datasets/divyeshardeshana/supply-chain-shipment-pricing-data.
 
-## File Structure
+## Architecture
+
+![Uploading Untitled Diagram.drawio.png…]()
+
+
