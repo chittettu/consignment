@@ -27,6 +27,10 @@ Data for the project taken fron the Kaggle https://www.kaggle.com/datasets/divye
 
 ![Untitled Diagram drawio](https://github.com/chittettu/consignment/assets/105189151/868d5bb4-c81d-4cdc-a18b-7423132f580c)
 
+## Design
+
+![image](https://github.com/chittettu/consignment/assets/105189151/fc008a5f-e513-4213-ad0d-acf729f00fe6)
+
 ## Model information
 
            Model Name              R2 score 
