@@ -39,9 +39,10 @@ Data for the project taken fron the Kaggle https://www.kaggle.com/datasets/divye
 After model training, the model shows a R-squared value of 0.9782 (97.82% accuracy) on the test data, signifying a robust level of predictive accuracy.
 ## Installation
 To run the code, first clone this repository and navigate to the project directory:
-    git clone 
+           git clone https://github.com/chittettu/consignment.git
+
 Create a virtual environment
-    conda create -p env python==3.8 -y
-    conda activate env/
+           conda create -p env python==3.8 -y
+           conda activate env/
 
 
