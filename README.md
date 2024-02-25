@@ -46,5 +46,13 @@ Create a virtual environment
 
            conda create -p env python==3.8 -y
            conda activate env/
+           
+To run this project, you will need Python packages present in the requirements file
 
+            pip install -r requirements.txt
+
+Then, run the app.py file to start the Flask web application:
+
+            python app.py
+            
 
