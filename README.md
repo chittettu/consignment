@@ -53,6 +53,22 @@ To run this project, you will need Python packages present in the requirements f
 
 Then, run the app.py file to start the Flask web application:
 
-            python app.py
-            
+            streamlit run app.py
+
+## Web deployment
+
+Deployed in:
+* AWS
+* Streamlit cloud
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Run the project
+
+* Clone the project
+* pip install -r requirements.txt
+* streamlit run app.py (for running in local host)
+
 
